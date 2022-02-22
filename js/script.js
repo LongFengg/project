@@ -1,39 +1,34 @@
 "use sctrict";
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+let num = 10;
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
-
-
-let i = 1;
-
-do {
-    const a = prompt('Один из последних просмотренных фильмов?', ''),
-             b = prompt('На сколько оцените его?', '');
-
-             if(a != null && b != null && a != '' && b != '' && a.length < 50){
-                personalMovieDB.movies[a] = b;  
-                console.log('done');
-                i++;
-             } else{
-                 console.log('Error');
-             }
-} while(i <=2);
-
-if(numberOfFilms<10){
-    console.log('Просмотрено довольно мало фильмов');
-} else if(numberOfFilms<30 && numberOfFilms >=10){
-    console.log('Вы классический зритель');
-} else if(numberOfFilms>=30){
-    console.log('Вы киноман');
-} else{
-    console.log('Произошла ошибка');
+function showFirstMessage(text) {
+    console.log(text);
+    num = 25;
 }
 
-console.log(personalMovieDB);
+showFirstMessage("Hello world!");
+console.log(num);
+
+// function calc(a, b){
+//     return (a + b);
+// }
+
+// console.log(calc(4, 7));
+
+function ret() {
+    let num = 50;
+    return num;
+}
+
+const antoherNum = ret();
+console.log(antoherNum);
+
+const logger = function(){
+    console.log('Hello');
+};
+
+logger();
+
+const calc = (a, b) => a + b;
+console.log(calc(5,4));
