@@ -53,10 +53,10 @@ function detectPersonalLevel(){
 
 function writeYoutGenres(){
     for (let i = 1; i <= 3; i++) {
-    const a = prompt('Ваш любимый жанр под номером ' + i, '');
+    const genre = prompt('Ваш любимый жанр под номером ' + i, '');
 
-    if (a != null && a != '' && a.length < 50) {
-        personalMovieDB.genres[i-1] = a;
+    if (genre != null && genre != '' && genre.length < 50) {
+        personalMovieDB.genres[i-1] = genre;
         console.log('done');
     } else {
         console.log('error');
