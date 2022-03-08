@@ -1,54 +1,22 @@
 "use sctrict";
 
-//To String
+const box = document.getElementById('box');
 
-// 1)
+console.log(box);
 
-console.log(typeof(String(null)));
+const btns = document.getElementsByTagName('button');
 
+console.log(btns[1]);
 
-// 2)
-console.log(typeof(5 + ''));
+const circles = document.getElementsByClassName('circle');
+console.log(circles[1]);
 
-const num = 5;
+const hearts = document.querySelectorAll('.heart');
 
-console.log("https://vk.com/catalog/" + num);
+hearts.forEach(item =>{
+    console.log(item);
+});
 
-const fonSize = 26 + 'px';
+const oneHeart = document.querySelector('.heart');
+console.log(oneHeart);
 
-//To number
-
-// 1)
-console.log(typeof(Number('4')));
-
-// 2)
-console.log(typeof(+'5'));
-
-// 3)
-console.log(typeof(parseInt('15px', 10)));
-
-//To boolean
-
-// 0, '', null, undefined, NaN; - false
-
-// 1)
-
-let switcher = null;
-
-if (switcher) {
-    console.log('Working)');
-}
-
-switcher = 1;
-
-if (switcher) {
-    console.log('Working)');
-}
-
-// 2)
-
-console.log(typeof(Boolean('4')));
-
-// 3)
-
-console.log(typeof(!!'4'));
